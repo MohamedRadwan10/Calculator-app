@@ -1,0 +1,506 @@
+@font-face {
+  font-family: "Leadue Spartan";
+  src: url(../font/LeagueSpartan-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Leadue Spartan";
+  src: url(../font/LeagueSpartan-VariableFont_wght.ttf);
+  font-weight: 700;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Leadue Spartan";
+}
+.calculator-app {
+  background-color: hsl(222, 26%, 31%);
+  min-height: 100vh;
+}
+.calculator {
+  width: 28%;
+  min-height: 350px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.color {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+.theme {
+  position: relative;
+  display: flex;
+  gap: 20px;
+}
+.buttons {
+  width: 65px;
+  height: 25px;
+  background-color: hsl(223, 31%, 20%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 20px;
+}
+.btn-color {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 0;
+  background-color: hsl(6, 63%, 50%);
+}
+.color-h3 {
+  font-size: 24px;
+}
+.theme span {
+  margin: 10px 0 0 0;
+  font-size: 14px;
+}
+.btn-color1 {
+}
+.btn-color2,
+.btn-color3 {
+  opacity: 0;
+}
+.btn-p {
+  width: 60%;
+  position: absolute;
+  top: -70%;
+  left: 55%;
+}
+.btn-p p {
+  display: inline-block;
+  letter-spacing: 13px;
+}
+
+.result {
+  padding: 30px 10px 30px 0;
+  width: 100%;
+  height: 80px;
+  background-color: hsl(224, 36%, 15%);
+  color: white;
+  margin: 25px 0;
+  border-radius: 10px;
+  text-align: right;
+  font-size: 32px;
+}
+.numbers {
+  padding: 20px;
+  display: grid;
+  grid-template-areas:
+    "item1 item1 item1 item2 item2 item2 item3 item3 item3 item4 item4 item4"
+    "item5 item5 item5 item6 item6 item6 item7 item7 item7 item8 item8 item8"
+    "item9 item9 item9 item10 item10 item10 item11 item11 item11 item12 item12 item12"
+    "item13 item13 item13 item14 item14 item14 item15 item15 item15 item16 item16 item16"
+    "item17 item17 item17 item17 item17 item17 item18 item18 item18 item18 item18 item18";
+  gap: 15px;
+  border-radius: 10px;
+  background-color: hsl(223, 31%, 20%);
+}
+.btn {
+  box-shadow: 0px 2px 1px 1px hsl(35, 11%, 61%);
+  font-size: 20px;
+  padding: 12px 0 6px 0;
+  border-radius: 5px;
+  border: 0;
+  background-color: hsl(30, 25%, 89%);
+  color: hsl(221, 14%, 31%);
+}
+.del {
+  box-shadow: 0px 3px 0px 0px hsl(224, 28%, 35%);
+}
+.reset {
+  box-shadow: 0px 3px 0px 0px hsl(224, 28%, 35%);
+}
+.btn18 {
+  box-shadow: 0px 3px 0px 0px hsl(6, 70%, 34%);
+}
+.btn-num {
+  font-size: 32px;
+}
+.btn1 {
+  grid-area: item1;
+}
+.btn2 {
+  grid-area: item2;
+}
+.btn3 {
+  grid-area: item3;
+}
+.btn4 {
+  grid-area: item4;
+  background-color: hsl(225, 21%, 49%);
+  color: hsl(0, 0%, 100%);
+}
+.btn5 {
+  grid-area: item5;
+}
+.btn6 {
+  grid-area: item6;
+}
+.btn7 {
+  grid-area: item7;
+}
+.btn8 {
+  grid-area: item8;
+}
+.btn9 {
+  grid-area: item9;
+}
+.btn10 {
+  grid-area: item10;
+}
+.btn11 {
+  grid-area: item11;
+}
+.btn12 {
+  grid-area: item12;
+}
+.btn13 {
+  grid-area: item13;
+}
+.btn14 {
+  grid-area: item14;
+}
+.btn15 {
+  grid-area: item15;
+}
+.btn16 {
+  grid-area: item16;
+}
+.btn17 {
+  grid-area: item17;
+  background-color: hsl(225, 21%, 49%);
+  color: hsl(0, 0%, 100%);
+}
+.btn18 {
+  grid-area: item18;
+  background-color: hsl(6, 63%, 50%);
+  color: hsl(0, 0%, 100%);
+}
+main[background="default"] .btn-color1{
+  opacity: 1;
+}
+main[background="default"] .btn-color2{
+  opacity: 0;
+}
+main[background="default"] .btn-color3{
+  opacity: 0;
+}
+main[background="default"] {
+  background-color: hsl(222, 26%, 31%);
+}
+main[background="default"] .numbers {
+  background-color: hsl(223, 31%, 20%);
+
+}
+main[background="default"] .numbers .btn-num{
+    background-color: hsl(30, 25%, 89%);
+  box-shadow: 0px 3px 0px 0px hsl(28, 16%, 65%);
+  color: hsl(221, 14%, 31%);
+}
+main[background="default"] .result {
+  background-color: hsl(224, 36%, 15%);
+  color: hsl(0, 0%, 100%);
+
+}
+main[background="default"] .del{
+  background-color: hsl(225, 21%, 49%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 0px 3px 0px 0px hsl(224, 28%, 35%);
+} 
+main[background="default"] .btn18{
+  background-color: hsl(6, 63%, 50%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 0px 3px 0px 0px hsl(6, 70%, 34%);
+}
+main[background="default"] .reset{
+  background-color: hsl(225, 21%, 49%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 0px 3px 0px 0px 0px 3px 0px 0px hsl(224, 28%, 35%);
+}
+main[background="default"] .color{
+  color: hsl(0, 0%, 100%);
+}
+main[background="default"] .btn-color1{
+  background-color:hsl(6, 63%, 50%) ;
+}
+main[background="default"] .buttons{
+  background-color:hsl(223, 31%, 20%) ;
+}
+/* ! hover-------------------------------------------------------- */
+main[background="default"] .btn-color1:hover,main[background="default"] .btn18:hover{
+  cursor: pointer;
+  background-color: hsl(6, 66%, 61%);
+}
+main[background="default"] .del:hover, main[background="default"] .reset:hover{
+  cursor: pointer;
+  background-color: hsl(226, 49%, 78%);
+}
+main[background="default"] .btn-num:hover{
+  cursor: pointer;
+  background-color: hsl(0, 0%, 100%);
+}
+/* .//////////////////////////////////////////////// */
+
+main[background="light"] .btn-color2{
+  opacity: 1;
+}
+main[background="light"] .btn-color1{
+  opacity: 0;
+}
+main[background="light"] .btn-color3{
+  opacity: 0;
+}
+main[background="light"] {
+  background-color: hsl(0, 0%, 90%);
+}
+main[background="light"] .numbers {
+  background-color: hsl(0, 5%, 81%);
+
+}
+main[background="light"] .numbers .btn-num{
+    background-color: hsl(45, 7%, 89%);
+  box-shadow: 0px 3px 0px 0px hsl(35, 11%, 61%);
+  color: hsl(60, 10%, 19%);
+}
+main[background="light"] .result {
+  background-color: hsl(0, 0%, 93%);
+  color: hsl(0, 0%, 0%);
+
+}
+main[background="light"] .del{
+  background-color: hsl(185, 42%, 37%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 0px 3px 0px 0px hsl(185, 58%, 25%);
+} 
+main[background="light"] .btn18{
+  background-color: hsl(25, 98%, 40%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 0px 3px 0px 0px hsl(25, 99%, 27%);
+}
+main[background="light"] .reset{
+  background-color: hsl(185, 42%, 37%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 0px 3px 0px 0px hsl(185, 58%, 25%);
+}
+main[background="light"] .color{
+  color: hsl(0, 0%, 0%);
+}
+main[background="light"] .btn-color2{
+  background-color:hsl(25, 98%, 40%) ;
+}
+main[background="light"] .buttons{
+  background-color:hsl(0, 5%, 81%) ;
+}
+/* ! hover-------------------------------------------------------- */
+main[background="light"] .btn-color2:hover,main[background="light"] .btn18:hover{
+  cursor: pointer;
+  background-color: hsl(25, 71%, 57%);
+}
+main[background="light"] .del:hover, main[background="light"] .reset:hover{
+  cursor: pointer;
+  background-color: hsl(184, 32%, 58%);
+}
+main[background="light"] .btn-num:hover{
+  cursor: pointer;
+  background-color: hsl(0, 0%, 100%);
+}
+/* .//////////////////////////////////////////////// */
+
+main[background="dark"] .btn-color2{
+  opacity: 0;
+}
+main[background="dark"] .btn-color1{
+  opacity: 0;
+}
+main[background="dark"] .btn-color3{
+  opacity: 1;
+}
+main[background="dark"] {
+  background-color: hsl(268, 75%, 9%);
+}
+main[background="dark"] .numbers {
+  background-color: hsl(268, 71%, 12%);
+
+}
+main[background="dark"] .numbers .btn-num{
+    background-color: hsl(268, 47%, 21%);
+  box-shadow: 0px 3px 0px 0px hsl(290, 70%, 36%);
+  color: hsl(52, 100%, 62%);
+}
+main[background="dark"] .result {
+  background-color: hsl(268, 71%, 12%);
+  color:hsl(52, 100%, 62%);
+
+}
+main[background="dark"] .del{
+  background-color: hsl(281, 89%, 26%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 0px 3px 0px 0px hsl(285, 91%, 52%);
+} 
+main[background="dark"] .btn18{
+  background-color: hsl(176, 100%, 44%);
+  color: hsl(198, 20%, 13%);
+  box-shadow: 0px 3px 0px 0px hsl(177, 92%, 70%);
+}
+main[background="dark"] .reset{
+  background-color: hsl(281, 89%, 26%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 0px 3px 0px 0px hsl(285, 91%, 52%);
+}
+main[background="dark"] .color{
+  color: hsl(52, 100%, 62%);
+}
+main[background="dark"] .btn-color3{
+  background-color:hsl(176, 100%, 44%) ;
+}
+main[background="dark"] .buttons{
+  background-color:hsl(268, 71%, 12%) ;
+}
+/* ! hover-------------------------------------------------------- */
+main[background="dark"] .btn-color3:hover,main[background="dark"] .btn18:hover{
+  cursor: pointer;
+  background-color: hsl(176, 73%, 73%);
+}
+main[background="dark"] .del:hover, main[background="dark"] .reset:hover{
+  cursor: pointer;
+  background-color: hsl(281, 75%, 41%);
+}
+main[background="dark"] .btn-num:hover{
+  cursor: pointer;
+  background-color: hsl(267, 47%, 45%);
+}
+/* .////////////////////////////////////////////////////////////// */
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .del {
+    font-size: 18px;
+    padding: 10px 14px;
+  }
+  .reset {
+    font-size: 18px;
+    padding: 10px 14px;
+  }
+  .btn18 {
+    font-size: 18px;
+    padding: 10px 14px;
+  }
+  .btn-p p {
+    letter-spacing: 15px;
+  }
+  .btn-color1 {
+    margin-left: 2px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .calculator {
+    width: 60%;
+  }
+  .btn {
+    padding: 16px 18px 5px 15px;
+    font-size: 25px;
+  }
+  .theme span {
+    font-size: 10px;
+  }
+
+  .del {
+    font-size: 18px;
+    padding: 10px 14px;
+  }
+  .reset {
+    font-size: 18px;
+    padding: 10px 14px;
+  }
+  .btn18 {
+    font-size: 18px;
+    padding: 10px 14px;
+  }
+  .btn-p p {
+    letter-spacing: 11px;
+  }
+  .btn-color1 {
+    margin-left: 2px;
+  }
+  .result {
+    margin: 20px 0;
+  }
+}
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  .calculator {
+    width: 80%;
+  }
+  .btn {
+    padding: 16px 18px 5px 15px;
+    font-size: 25px;
+  }
+  .theme span {
+    font-size: 10px;
+  }
+
+  .del {
+    font-size: 14px;
+    padding: 16px 14px;
+  }
+  .reset {
+    font-size: 14px;
+    padding: 16px 14px;
+  }
+  .btn18 {
+    font-size: 14px;
+    padding: 16px 14px;
+  }
+  .btn-p p {
+    letter-spacing: 11px;
+  }
+  .btn-color1 {
+    margin-left: 2px;
+  }
+  .result {
+    margin: 20px 0;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .calculator {
+    width: 90%;
+  }
+  .btn {
+    padding: 21px 18px 12px 15px;
+    font-size: 28px;
+  }
+  .theme span {
+    font-size: 10px;
+  }
+
+  .del {
+    font-size: 18px;
+    padding: 16px 14px;
+  }
+  .reset {
+    font-size: 18px;
+    padding: 16px 14px;
+  }
+  .btn18 {
+    font-size: 18px;
+    padding: 16px 14px;
+  }
+  .btn-p p {
+    font-size: 12px;
+    letter-spacing: 14px;
+  }
+
+  .btn-color1 {
+    margin-left: 5px;
+  }
+  .result {
+    margin: 35px 0 20px 0;
+  }
+}
