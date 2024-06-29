@@ -10,7 +10,7 @@ let prevOperator = ''
 
 allBtns.forEach(function(item){
     item.addEventListener('click', function(event){
-        if(item.getAttribute('calc') === 'del'){
+         if(item.getAttribute('calc') === 'del'){
             const string = display.innerHTML
             display.innerHTML = string.slice(0, -1);
         }else if(item.getAttribute('calc') === 'reset'){
